@@ -4,7 +4,7 @@
  * Author: Misha Rudrastyh
  * Author URI: https://rudrastyh.com
  * Description: Provides better compatibility with metabox.io
- * Version: 1.0
+ * Version: 1.1
  * Plugin URI: https://rudrastyh.com/support/metabox-io
  */
 
@@ -165,7 +165,8 @@ class Rudr_SWC_Metaboxio {
 			}
 		}
 
-		return $processed_content;
+		$data[ 'content' ] = $processed_content;
+		return $data;
 	}
 
 	public function process_block( $block, $blog ) {
